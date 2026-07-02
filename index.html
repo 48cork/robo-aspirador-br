@@ -494,6 +494,38 @@
       color: rgba(255,255,255,.62);
     }
 
+    .picks-section { padding: 48px 20px 36px; background: var(--white); border-bottom: 1px solid var(--line); }
+    .picks-inner { max-width: 1180px; margin: 0 auto; }
+    .picks-header { margin-bottom: 22px; }
+    .picks-header h2 { margin: 0 0 6px; font-size: clamp(22px, 3vw, 32px); color: var(--ink); }
+    .picks-header p { margin: 0; color: var(--muted); }
+    .picks-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .pick-card {
+      background: var(--white); border: 1px solid var(--line); border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(17,24,39,.07); padding: 18px;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .pick-card__badge {
+      display: inline-flex; width: fit-content; border-radius: 999px;
+      padding: 4px 10px; font-size: 11px; font-weight: 900; text-transform: uppercase;
+    }
+    .badge--gold { background: #fff4cc; color: #8a5a00; }
+    .badge--blue { background: #eaf2ff; color: #174c9f; }
+    .badge--green { background: #e9f8f1; color: #06623d; }
+    .pick-card__img { width: 100%; height: 160px; object-fit: contain; border-radius: 8px; background: var(--paper); padding: 10px; }
+    .pick-card__name { margin: 0; font-size: 16px; font-weight: 900; color: var(--ink); line-height: 1.2; }
+    .pick-card__score { margin: 0; color: var(--muted); font-size: 14px; }
+    .pick-card__score strong { color: var(--orange); font-size: 17px; }
+    .pick-card__price { margin: 0; font-size: 22px; font-weight: 950; color: var(--ink); }
+    .pick-card__cta {
+      margin-top: auto; display: flex; align-items: center; justify-content: center;
+      gap: 6px; min-height: 42px; border-radius: 8px; padding: 10px 14px;
+      background: var(--orange); color: var(--white); text-decoration: none;
+      font-weight: 900; font-size: 14px;
+    }
+    .pick-card__cta:hover { opacity: .88; }
+    @media (max-width: 760px) { .picks-grid { grid-template-columns: 1fr; } }
+
     @media (max-width: 920px) {
       .nav-links { display: none; }
       .sticky-inner, .section-head {
@@ -696,6 +728,47 @@
         Como associado da Amazon, podemos receber comissao por compras qualificadas feitas pelos links desta pagina, sem custo adicional para voce. Precos, cupons, estoque e condicoes Prime mudam com frequencia.
       </div>
     </div>
+
+    <section class="picks-section" aria-labelledby="picks-title">
+      <div class="picks-inner">
+        <div class="picks-header">
+          <h2 id="picks-title">Seleção Rápida — 3 Melhores Robôs Aspiradores</h2>
+          <p>Clique para ver o preço atual na Amazon Brasil.</p>
+        </div>
+        <div class="picks-grid">
+          <article class="pick-card">
+            <span class="pick-card__badge badge--gold">Mais Potente</span>
+            <img class="pick-card__img" src="assets/dreame-l40-ultra-ae.png" alt="DREAME L40 Ultra AE" loading="lazy">
+            <p class="pick-card__name">DREAME L40 Ultra AE</p>
+            <p class="pick-card__score">Score <strong>9,3</strong>/10</p>
+            <p class="pick-card__price">R$ 5.499,00</p>
+            <a class="pick-card__cta" href="https://www.amazon.com.br/dp/B0FXM4S78T?tag=ianapratica21-20&utm_source=roboaspiradorbr&utm_medium=affiliate&utm_campaign=quick-picks" target="_blank" rel="noopener sponsored">
+              Ver preço na Amazon
+            </a>
+          </article>
+          <article class="pick-card">
+            <span class="pick-card__badge badge--blue">Melhor para Pets</span>
+            <img class="pick-card__img" src="assets/eufy-x10-pro.png" alt="eufy X10 Pro Omni" loading="lazy">
+            <p class="pick-card__name">eufy X10 Pro Omni</p>
+            <p class="pick-card__score">Score <strong>9,1</strong>/10</p>
+            <p class="pick-card__price">R$ 4.409,10</p>
+            <a class="pick-card__cta" href="https://www.amazon.com.br/dp/B0CPFBBHP4?tag=ianapratica21-20&utm_source=roboaspiradorbr&utm_medium=affiliate&utm_campaign=quick-picks" target="_blank" rel="noopener sponsored">
+              Ver preço na Amazon
+            </a>
+          </article>
+          <article class="pick-card">
+            <span class="pick-card__badge badge--green">Melhor Preço</span>
+            <img class="pick-card__img" src="assets/xiaomi-x20-pro.png" alt="Xiaomi Robot Vacuum X20 Pro" loading="lazy">
+            <p class="pick-card__name">Xiaomi Robot Vacuum X20 Pro</p>
+            <p class="pick-card__score">Score <strong>8,9</strong>/10</p>
+            <p class="pick-card__price">R$ 4.350,00</p>
+            <a class="pick-card__cta" href="https://www.amazon.com.br/dp/B0DFJGKW2L?tag=ianapratica21-20&utm_source=roboaspiradorbr&utm_medium=affiliate&utm_campaign=quick-picks" target="_blank" rel="noopener sponsored">
+              Ver preço na Amazon
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section id="review">
       <div class="section-inner">
